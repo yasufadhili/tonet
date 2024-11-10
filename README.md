@@ -1,7 +1,7 @@
 
 # Tonet - Real-Time File Sharing Across Devices
 
-Tonet is a command-line tool that enables seamless real-time file system sharing between different PCs on the same network. By leveraging UDP-based communication, Tonet allows users to access and manage files on remote devices as if they were local, with minimal configuration required.
+Tonet is a command-line tool that enables seamless real-time file system sharing between different PCs on the same network. Tonet allows one to access and manage files on remote devices as if they were local, with minimal configuration required.
 
 ## Key Features
 
