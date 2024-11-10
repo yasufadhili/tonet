@@ -27,7 +27,7 @@ Tonet is a command-line tool that enables seamless real-time file system sharing
 - `tonet copy <source-file-path> <target-device-name-or-ip>`: Copies a file from the local device to a remote device.
 - `tonet share <directory-path> <target-device-name-or-ip>`: Shares a specific directory with a remote device.
 
-See the [Tonet Command Reference](#tonet-command-reference) for a full list of available commands and options.
+See the [Tonet Command Reference](#./commands.md) for a full list of available commands and options.
 
 ## Tonet Command Reference
 
