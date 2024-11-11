@@ -4,8 +4,7 @@
  * Created Date: Monday 11th November, 2024, 20:44:14 EAT
  * Author: Yasu Fadhili
  * 
- * Copyright (c) 2024 Yasu Fadhili
- * Implementation from book : Building low latency applications in C++
+ * Credits -> Building Low Latency Applications in C++ book
  */
 
 
