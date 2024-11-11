@@ -10,6 +10,7 @@
 
 #pragma once
 
+#include <algorithm>
 #include "tcp_socket.h"
 
 namespace net {
