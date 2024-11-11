@@ -35,4 +35,65 @@ steps.md
 CMakeLists2.txt
 CMakeLists1.txt
 
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+
+# Build directories
 build/
+build/*
+out/
+bin/
+lib/
+
+# Compiled object files and libraries
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Backup and temporary files
+*~
+*.swp
+*.bak
+
+# IDE specific files
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# CLion
+.idea/
+*.iml
+cmake-build-*/
+
+# Visual Studio
+*.vcxproj*
+*.vcxproj.filters
+*.sln
+*.user
+*.vcxproj.user
+ipch/
+*.pdb
+*.opendb
+
+# Xcode
+*.pbxproj
+*.xcworkspace/
+xcuserdata/
+*.xcuserstate
+*.xcodeproj/
+*.xcsettings
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
