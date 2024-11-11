@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+steps.md
+CMakeLists2.txt
+CMakeLists1.txt
+
+build/
