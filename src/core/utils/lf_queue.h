@@ -1,3 +1,13 @@
+/*
+ * Filename: lf_queue.h
+ * Path: /tonet/src/core/utils
+ * Created Date: Monday 11th November, 2024, 20:48:46 EAT
+ * Author: Yasu Fadhili
+ * 
+ * Credits -> Building Low Latency Applications in C++ Book
+ */
+
+
 #pragma once
 
 #include <iostream>
