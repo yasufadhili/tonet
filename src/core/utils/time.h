@@ -7,12 +7,11 @@
  * Credits -> Building Low Latency Applications in C++ book
  */
 
-
-#pragma once
-
 #include <string>
 #include <chrono>
 #include <ctime>
+#include <iomanip>
+#include <sstream>
 
 namespace utils {
 
@@ -25,14 +24,24 @@ namespace utils {
   constexpr Nanos NANOS_TO_SECS = NANOS_TO_MILLIS * MILLIS_TO_SECS;
 
   inline auto getCurrentNanos() noexcept {
-    return std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+    return std::chrono::duration_cast<std::chrono::nanoseconds>(
+        std::chrono::system_clock::now().time_since_epoch()
+    ).count();
   }
 
   inline auto& getCurrentTimeStr(std::string* time_str) {
-    const auto time = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
-    time_str->assign(ctime(&time));
-    if(!time_str->empty())
-      time_str->at(time_str->length()-1) = '\0';
+    const auto now = std::chrono::system_clock::now();
+    const auto time = std::chrono::system_clock::to_time_t(now);
+
+    // Convert `time_t` to `tm` structure for further manipulation
+    std::tm tm_info;
+    localtime_r(&time, &tm_info);
+
+    // Format time in the "Day DD Month YYYY HH:MM:SS" format
+    std::ostringstream oss;
+    oss << std::put_time(&tm_info, "%a %d %b %Y %H:%M:%S");
+    time_str->assign(oss.str());
+
     return *time_str;
   }
 
