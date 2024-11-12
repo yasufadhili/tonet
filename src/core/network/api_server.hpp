@@ -18,6 +18,8 @@
 #include <string>
 #include <thread>
 #include <vector>
+#include <string>
+
 
 namespace http = boost::beast::http;
 namespace asio = boost::asio;
@@ -30,7 +32,7 @@ namespace net
   {
     bool success;
     std::string message;
-    boost::property_tree::ptree_data data;
+    boost::property_tree::ptree data;
 
     std::string toJSON() const {
         boost::property_tree::ptree root;
@@ -149,16 +151,16 @@ namespace net
     }
 
     void writeResponse() {
-        auto self = shared_from_this();
+      auto self = shared_from_this();
 
-        response_->set(http::field::content_length, response_->body().size());
+      response_->set(http::field::content_length, response_->body().size());
 
-        http::async_write(
-            socket_,
-            *response_,
-            [self](boost::system::error_code ec, std::size_t) {
-                self->socket_.shutdown(tcp::socket::shutdown_send, ec);
-            });
+      http::async_write(
+        socket_,
+        *response_,
+        [self](boost::system::error_code ec, std::size_t) {
+          self->socket_.shutdown(tcp::socket::shutdown_send, ec);
+        });
     }
   };
 
